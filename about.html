@@ -2,42 +2,44 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>À propos du projet</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>À propos du projet</h1>
-    <nav>
-      <a href="index.html">Accueil</a> |
-      <a href="about.html">À propos</a> |
-      <a href="rapport.html">Rapport</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Notre collaboration</h2>
     <p>
-      Ce site est le fruit d’une collaboration entre <strong>Bahbouhi Bouchaib</strong>,
-      chercheur indépendant en mathématiques basé à Nantes, et une intelligence artificielle.
+      Ce site présente une méthode prédictive originale pour estimer les paires <code>(p, q)</code> de la
+      célèbre conjecture forte de Goldbach, selon laquelle tout entier pair E ≥ 4 peut s’écrire comme la somme de deux nombres premiers.
+    </p>
+
+    <h2>Méthode prédictive</h2>
+    <p>
+      Pour chaque nombre pair <code>E</code>, nous utilisons la formule :
+    </p>
+    <pre><code>δ(E) = √E × (log log E) / log E</code></pre>
+    <p>
+      Cette valeur δ(E) permet de prédire une paire de la forme :
+    </p>
+    <pre><code>p = E/2 - δ(E)  q = E/2 + δ(E)</code></pre>
+    <p>
+      Ces valeurs ne sont pas toujours premières, mais elles sont généralement proches d’une vraie paire <code>(p′, q′)</code> de nombres premiers vérifiant <code>p′ + q′ = E</code>.
+    </p>
+
+    <h2>Objectif du site</h2>
+    <p>
+      Le but est de fournir une approximation rapide et efficace, sans vérification de primalité, en se basant uniquement sur la structure analytique de la répartition des nombres premiers.
     </p>
 
     <p>
-      Ensemble, ils ont conçu une <strong>formule prédictive innovante</strong>
-      permettant de calculer des couples de nombres premiers (p, q)
-      vérifiant la <strong>conjecture forte de Goldbach</strong>, même pour des entiers extrêmement grands.
+      Pour retrouver les vrais <code>p</code> et <code>q</code>, il suffit d’explorer autour de ces prédictions, dans un intervalle restreint.
     </p>
 
     <p>
-      Le site offre une méthode élégante et rapide pour prédire ces couples grâce à une équation simple,
-      testée jusqu’à <strong>10<sup>1000</sup></strong>. Toutes les découvertes sont
-      <strong>publiques, vérifiables</strong> et mises à disposition gratuitement.
+      Ce travail est une collaboration entre l’humain (Bouchaib Bouchaib) et l’IA, dans le cadre d’un programme de recherche original et autonome.
     </p>
-  </main>
 
-  <footer>
-    <p>© 2025 – Bahbouhi Bouchaib & IA – Méthode prédictive Goldbach</p>
-  </footer>
+    <p style="margin-top: 40px;">© 2025 Bouchaib Bouchaib — Tous droits réservés.</p>
+  </div>
 </body>
 </html>
