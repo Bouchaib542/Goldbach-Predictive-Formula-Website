@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Formule Prédictive de Goldbach</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -19,14 +17,17 @@
 
   <main>
     <h2>Entrez un nombre pair E (≥ 4)</h2>
-    <input type="text" id="inputE" placeholder="Ex. 100, 10^12..." />
+    <input type="number" id="evenNumber" placeholder="Ex: 128">
     <button onclick="calculer()">Calculer</button>
 
-    <div id="resultat"></div>
+    <div id="result"></div>
   </main>
 
   <footer>
-    &copy; 2025 Bouchaib Bouchaib — Tous droits réservés.
+    <p>© 2025 Bouchaib Bouchaib — Tous droits réservés.</p>
   </footer>
+
+  <!-- Appel correct du script -->
+  <script src="script.js"></script>
 </body>
 </html>
