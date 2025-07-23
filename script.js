@@ -1,8 +1,9 @@
-function isPrime(n) {
+function estPremier(n) {
   if (n < 2n) return false;
-  if (n === 2n || n === 3n) return true;
+  if (n === 2n) return true;
   if (n % 2n === 0n) return false;
-  for (let i = 3n; i * i <= n; i += 2n) {
+  const racine = BigInt(Math.floor(Math.sqrt(Number(n))));
+  for (let i = 3n; i <= racine; i += 2n) {
     if (n % i === 0n) return false;
   }
   return true;
@@ -11,26 +12,32 @@ function isPrime(n) {
 function calculerPQ() {
   const input = document.getElementById("inputNumber").value.trim();
   const E = BigInt(input);
-  const resultDiv = document.getElementById("resultat");
 
-  if (E < 4n || E % 2n !== 0n) {
-    resultDiv.innerHTML = "Veuillez entrer un nombre pair ≥ 4.";
+  if (E % 2n !== 0n || E <= 2n) {
+    document.getElementById("resultat").innerText = "Veuillez entrer un nombre pair supérieur à 2.";
     return;
   }
 
-  // Approximation de t : t ≈ √E · (log log E) / log E
-  const ln = Math.log;
-  const eFloat = parseFloat(E.toString());
-  const sqrtE = Math.sqrt(eFloat);
-  const tApprox = Math.round(sqrtE * ln(ln(eFloat)) / ln(eFloat));
-  const t = BigInt(tApprox);
+  const lnE = Math.log(Number(E));
+  const lnlnE = Math.log(lnE);
+  const delta = BigInt(Math.round(Math.sqrt(Number(E)) * (lnlnE / lnE)));
 
-  const p = E / 2n - t;
-  const q = E / 2n + t;
+  const p1 = E / 2n - delta;
+  const q1 = E - p1;
 
-  if (isPrime(p) && isPrime(q)) {
-    resultDiv.innerHTML = `✅ Décomposition trouvée : <strong>${E} = ${p} + ${q}</strong>`;
+  const p2 = E / 2n + delta;
+  const q2 = E - p2;
+
+  let message = `Formule prédictive : t ≈ √E × log log(E) / log(E)\n`;
+  message += `Essais autour de E/2 ± t :\n`;
+
+  if (estPremier(p1) && estPremier(q1)) {
+    message += `→ (p, q) = (${p1}, ${q1}) ✅\n`;
+  } else if (estPremier(p2) && estPremier(q2)) {
+    message += `→ (p, q) = (${p2}, ${q2}) ✅\n`;
   } else {
-    resultDiv.innerHTML = `❌ La prédiction (${p}, ${q}) ne donne pas deux nombres premiers.`;
+    message += `❌ Aucun couple premier trouvé avec t prédictif.`;
   }
+
+  document.getElementById("resultat").innerText = message;
 }
