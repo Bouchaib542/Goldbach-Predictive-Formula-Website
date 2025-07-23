@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Goldbach Predictive Decomposition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcul Prédictif de Goldbach</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-color: #f4fdf4; font-family: Arial, sans-serif; color: #222;">
-  <header style="background-color: olive; color: white; padding: 1rem;">
-    <h1>Goldbach Predictive Decomposition</h1>
-    <p><strong>Using √E · (log log E) / log E to find p + q = E</strong></p>
+<body>
+  <header>
+    <h1>Calcul Prédictif de Goldbach</h1>
     <nav>
-      <a href="index.html" style="color:white;">Home</a> |
-      <a href="about.html" style="color:white;">About</a>
+      <a href="index.html">Accueil</a> |
+      <a href="about.html">À propos</a> |
+      <a href="rapport.html">Rapport</a>
     </nav>
   </header>
 
-  <main style="padding: 1.5rem;">
-    <label for="evenNumber"><strong>Enter an even number E ≥ 4:</strong></label><br />
-    <input type="text" id="evenNumber" placeholder="Example: 1000000000000000000" style="width: 300px; padding: 0.5rem; margin-top: 0.5rem;" />
-    <button onclick="predictPair()" style="padding: 0.5rem 1rem; margin-left: 1rem;">Predict (p, q)</button>
-
-    <div id="result" style="margin-top: 2rem; font-size: 1.1rem;"></div>
+  <main>
+    <p>Entrez un nombre pair <strong>E</strong> (≥ 4) :</p>
+    <input type="text" id="inputNumber" placeholder="Exemple : 100" />
+    <button onclick="calculerPQ()">Calculer (p, q)</button>
+    <div id="resultat"></div>
   </main>
 
-  <footer style="background-color: #ddd; padding: 1rem; text-align: center;">
-    <p>© Bahbouhi Bouchaib & AI Assistant – 2025. Formula-based Goldbach Resolution.</p>
+  <footer>
+    <p>© 2025 Bahbouhi Bouchaib – Tous droits réservés</p>
   </footer>
 
   <script src="script.js"></script>
