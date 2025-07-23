@@ -27,4 +27,7 @@ Bahbouhi Bouchaib — Chercheur indépendant en mathématiques (France)
 
 ---
 
-🔒 Tous les contenus sont publics et peuvent être reproduits avec mention du projet.
+## 📜 Licence
+
+Ce site et l’ensemble de son contenu sont la propriété exclusive de **Bahbouhi Bouchaib**.  
+**Toute reproduction, distribution ou utilisation sans l’autorisation expresse de l’auteur est strictement interdite.**
