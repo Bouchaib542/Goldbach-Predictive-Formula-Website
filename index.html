@@ -3,29 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calcul Prédictif de Goldbach</title>
+  <title>Prédiction de Goldbach</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Calcul Prédictif de Goldbach</h1>
-    <nav>
-      <a href="index.html">Accueil</a> |
-      <a href="about.html">À propos</a> |
-      <a href="rapport.html">Rapport</a>
-    </nav>
-  </header>
+  <h1>Calcul des paires (p, q) par formule prédictive</h1>
 
-  <main>
-    <p>Entrez un nombre pair <strong>E</strong> (≥ 4) :</p>
-    <input type="text" id="inputNumber" placeholder="Exemple : 100" />
+  <div class="container">
+    <label for="inputNumber">Entrez un nombre pair E :</label>
+    <input type="text" id="inputNumber" placeholder="Exemple : 1000000000000" />
     <button onclick="calculerPQ()">Calculer (p, q)</button>
-    <div id="resultat"></div>
-  </main>
+  </div>
 
-  <footer>
-    <p>© 2025 Bahbouhi Bouchaib – Tous droits réservés</p>
-  </footer>
+  <div id="resultat"></div>
 
   <script src="script.js"></script>
 </body>
