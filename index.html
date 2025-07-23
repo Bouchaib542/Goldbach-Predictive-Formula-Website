@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goldbach Predictive Decomposition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #f4fdf4; font-family: Arial, sans-serif; color: #222;">
+  <header style="background-color: olive; color: white; padding: 1rem;">
+    <h1>Goldbach Predictive Decomposition</h1>
+    <p><strong>Using √E · (log log E) / log E to find p + q = E</strong></p>
+    <nav>
+      <a href="index.html" style="color:white;">Home</a> |
+      <a href="about.html" style="color:white;">About</a>
+    </nav>
+  </header>
+
+  <main style="padding: 1.5rem;">
+    <label for="evenNumber"><strong>Enter an even number E ≥ 4:</strong></label><br />
+    <input type="text" id="evenNumber" placeholder="Example: 1000000000000000000" style="width: 300px; padding: 0.5rem; margin-top: 0.5rem;" />
+    <button onclick="predictPair()" style="padding: 0.5rem 1rem; margin-left: 1rem;">Predict (p, q)</button>
+
+    <div id="result" style="margin-top: 2rem; font-size: 1.1rem;"></div>
+  </main>
+
+  <footer style="background-color: #ddd; padding: 1rem; text-align: center;">
+    <p>© Bahbouhi Bouchaib & AI Assistant – 2025. Formula-based Goldbach Resolution.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
