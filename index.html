@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formule Prédictive de Goldbach</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goldbach Predictive Formula</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Formule Prédictive de Goldbach</h1>
-
-  <nav>
-    <a href="index.html">Accueil</a> |
-    <a href="about.html">À propos</a> |
-    <a href="rapport.html">Rapport</a>
-  </nav>
-
-  <h2>Entrez un nombre pair E (≥ 4)</h2>
-  <input type="number" id="evenNumber" placeholder="Ex: 128">
-  <button onclick="calculer()">Calculer</button>
-
-  <div id="result"></div>
-
-  <footer>
-    <p>© 2025 Bouchaib Bouchaib — Tous droits réservés.</p>
-  </footer>
+  <div class="container">
+    <h1>Formule Prédictive de Goldbach</h1>
+    <p>Entrez un nombre pair très grand :</p>
+    <input type="text" id="evenNumber" placeholder="Exemple : 1000000000000" />
+    <button onclick="calculer()">Calculer</button>
+    <div id="result"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
